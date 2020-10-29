@@ -9,14 +9,14 @@ import { VueService } from './../vue.service';
 })
 export class PeopleAroundComponent implements OnInit {
 
-  lisabeyu_image: string;
-  cyruskind_image: string;
-  lindseymallon_image: string;
-  ardilladeneys_image: string;
-  zeejacattack_image: string;
-  officialkatka_image: string;
-  nu__dao_image: string;
-  ianastasiagreen_image: string;
+  lisabeyu_image = "assets/images/download.jpg";
+  cyruskind_image = "assets/images/download.jpg";
+  lindseymallon_image = "assets/images/download.jpg";
+  ardilladeneys_image = "assets/images/download.jpg";
+  zeejacattack_image = "assets/images/download.jpg";
+  officialkatka_image = "assets/images/download.jpg";
+  nu__dao_image = "assets/images/download.jpg";
+  ianastasiagreen_image = "assets/images/download.jpg";
 
   constructor(private vueService: VueService) { }
 
