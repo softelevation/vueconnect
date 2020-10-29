@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Conv_MyriadPro-Bold';
+    src: url('../fonts/MyriadPro-Bold.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Bold.woff') format('woff'), url('../fonts/MyriadPro-Bold.ttf') format('truetype'), url('../fonts/MyriadPro-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Conv_MyriadPro-Regular';
+    src: url('../fonts/MyriadPro-Regular.eot');
+    src: local('☺'), url('../fonts/MyriadPro-Regular.woff') format('woff'), url('../fonts/MyriadPro-Regular.ttf') format('truetype'), url('../fonts/MyriadPro-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Conv_MyriadPro-Regular';
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-family: FontAwesome;
+    font-style: normal;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/*********************************main css************************/
+
+.mobile-screen {
+    max-width: 475px;
+    margin: 0 auto;
+}
+
+.main-contant-bg.mobile-screen {
+    background-image: url('../images/color_gradient.png');
+    background-size: cover;
+}
+
+header.myHeader {
+    padding: 40px 0;
+}
+
+button.sign_up_btn {
+    background: #070707;
+    border: 0;
+    color: #fff;
+    line-height: normal;
+    height: 30px;
+    padding: 9px 17px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.inner-bg-sec {
+    background-image: linear-gradient(to right, #fea76d, #f8785e);
+    padding: 7px 0;
+}
+
+.inner-sec a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.main-cont-col img {
+    vertical-align: top;
+}
+
+.main-cont-col p {
+    max-width: 335px;
+}
+
+.form_fields p {
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.form-field input {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    color: #b7b7b7;
+    border: 0;
+    height: 42px;
+    background: #000;
+    padding: 0 15px;
+}
+
+.form-field input:focus {
+    color: #b7b7b7;
+    font-weight: bold;
+}
+
+.form-field {
+    margin-bottom: 30px;
+}
+
+.form-field input::placeholder {
+    color: #b7b7b7;
+    font-weight: bold;
+}
+
+.inner-col-img p {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.logoSignup p {
+    font-size: 15px;
+}
+
+.inner-col-img img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
