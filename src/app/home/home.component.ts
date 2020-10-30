@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
   dataIn: FormGroup;
   error: string;
 
+  instaId:string
+
   constructor(
               private fb: FormBuilder,
               private router: Router,
@@ -25,6 +27,12 @@ export class HomeComponent implements OnInit {
       error => this.error = error
     );
 
+  }
+
+  getConnected(){
+    console.log(this.instaId)
+    ///people-around
+    this.router.navigate(['/people-around',this.instaId])
   }
   
 

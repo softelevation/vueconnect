@@ -14,6 +14,16 @@
   <section class="multi-img-col">
     <div class="container">
      <div class="row">
+
+      <div *ngIf='connected_name' class="col-6" (click)="openPage()" style="cursor: pointer;">
+        <div  class="inner-col-img mb-4">
+         <p>{{connected_name}} </p>
+         
+           <img class="img-fluid" src="{{connected_image}}" alt="profile-img">
+          
+        </div>
+      </div>
+
        <div class="col-6">
          <div class="inner-col-img mb-4">
           <p>{{lisabeyu_name}} </p>

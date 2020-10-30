@@ -10,6 +10,7 @@ import { VueService } from './../vue.service';
 })
 export class RaisedproperComponent implements OnInit {
 
+  user_id: string;
   user_name: string;
   username: string;
   user_image = "assets/images/download.jpg";
@@ -21,10 +22,17 @@ export class RaisedproperComponent implements OnInit {
 
       this.vueService.instaApi(params.get('productId')).subscribe(res => {
           this.user_name = res.graphql.user.full_name;
+          this.user_id = res.graphql.user.username;
           this.username = '@'+res.graphql.user.username;
           this.user_image = res.graphql.user.profile_pic_url;
       });
     });
+  }
+
+  openId(){
+    console.log("openId")
+
+    window.open(`https://www.instagram.com/${this.user_id}/`,'_blank')
   }
 
 }

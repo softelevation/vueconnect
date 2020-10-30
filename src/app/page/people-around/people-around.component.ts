@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VueService } from './../vue.service';
 
 @Component({
@@ -26,9 +27,30 @@ export class PeopleAroundComponent implements OnInit {
   ianastasiagreen_image = "assets/images/download.jpg";
   ianastasiagreen_name : string;
 
-  constructor(private vueService: VueService) { }
+  connected_image = "assets/images/download.jpg";
+  connected_name : string;
+  connected_id : string;
+  constructor(private vueService: VueService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
+  openPage(){
+    console.log("openpage")
+    this.router.navigate(['/raisedproper',this.connected_id])
+  }
   ngOnInit(): void {
+
+    this.route.params.subscribe(params => {
+      console.log('The id of this route is: ', params.id);
+      if(params.id){
+        this.connected_id=params.id.replace('@','');
+        
+        this.vueService.instaApi(this.connected_id).subscribe(res => {
+            this.connected_name = res.graphql.user.full_name;
+            this.connected_image = res.graphql.user.profile_pic_url;
+        });
+      }
+    });
 
     this.vueService.instaApi('lisabeyu').subscribe(res => {
         this.lisabeyu_name = res.graphql.user.full_name;

@@ -7,6 +7,7 @@ import { YourListComponent } from './page/your-list/your-list.component';
 
 const routes: Routes = [
   {path: 'people-around', component: PeopleAroundComponent},
+  {path: 'people-around/:id', component: PeopleAroundComponent},
   {path: 'raisedproper/:productId', component: RaisedproperComponent},
   {path: 'your-list', component: YourListComponent}
 ];
