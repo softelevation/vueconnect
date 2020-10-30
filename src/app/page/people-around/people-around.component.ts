@@ -30,17 +30,42 @@ export class PeopleAroundComponent implements OnInit {
   connected_image = "assets/images/download.jpg";
   connected_name : string;
   connected_id : string;
+
+  profiles=[]; 
+
+
   constructor(private vueService: VueService,
     private route: ActivatedRoute,
     private router: Router) { }
 
-  openPage(){
-    console.log("openpage")
-    this.router.navigate(['/raisedproper',this.connected_id])
+  openPage(id){
+    this.router.navigate(['/raisedproper',id])
+  }
+
+  async init(){
+    const profiles=localStorage.getItem('profiles') && JSON.parse(localStorage.getItem('profiles')) || [];
+    const defaultAarray=[...profiles,'lisabeyu','cyruskind','_lindseymallon','ardilladeneys','zeejacattack','nu__dao'];
+
+    const uniArr = [...(new Set(defaultAarray))];
+    for(const p of uniArr){
+      try{
+        const res:any = await  this.vueService.instaApi(p).toPromise();
+        this.profiles.push({
+          id:p,
+          name: res.graphql.user.full_name,
+          url: res.graphql.user.profile_pic_url
+        })
+      }catch(e){
+        console.log(e)
+      }
+    }
+
   }
   ngOnInit(): void {
 
-    this.route.params.subscribe(params => {
+    this.init();
+    
+   /* this.route.params.subscribe(params => {
       console.log('The id of this route is: ', params.id);
       if(params.id){
         this.connected_id=params.id.replace('@','');
@@ -50,8 +75,8 @@ export class PeopleAroundComponent implements OnInit {
             this.connected_image = res.graphql.user.profile_pic_url;
         });
       }
-    });
-
+    });*/
+/*
     this.vueService.instaApi('lisabeyu').subscribe(res => {
         this.lisabeyu_name = res.graphql.user.full_name;
         this.lisabeyu_image = res.graphql.user.profile_pic_url;
@@ -91,7 +116,7 @@ export class PeopleAroundComponent implements OnInit {
       this.ianastasiagreen_name = res.graphql.user.full_name;
       this.ianastasiagreen_image = res.graphql.user.profile_pic_url;
     });
-    
+    */
 
   }
 

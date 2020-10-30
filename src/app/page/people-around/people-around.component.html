@@ -15,7 +15,15 @@
     <div class="container">
      <div class="row">
 
-      <div *ngIf='connected_name' class="col-6" (click)="openPage()" style="cursor: pointer;">
+      <div class="col-6" *ngFor="let p of profiles;">
+        <div class="inner-col-img mb-4" (click)="openPage(p.id)" style="cursor: pointer;">
+         <p>{{p.name}} </p>
+          
+           <img class="img-fluid" src="{{p.url}}" alt="profile-img">
+         
+        </div>
+      </div>
+      <!-- <div *ngIf='connected_name' class="col-6" (click)="openPage()" style="cursor: pointer;">
         <div  class="inner-col-img mb-4">
          <p>{{connected_name}} </p>
          
@@ -87,7 +95,7 @@
            <img class="img-fluid" src="{{ianastasiagreen_image}}" alt="profile-img">
           </a>
          </div>
-       </div>
+       </div> -->
      </div>
     </div>
   </section>

@@ -32,7 +32,10 @@ export class HomeComponent implements OnInit {
   getConnected(){
     console.log(this.instaId)
     ///people-around
-    this.router.navigate(['/people-around',this.instaId])
+    const profiles=localStorage.getItem('profiles') && JSON.parse(localStorage.getItem('profiles')) || [];
+    profiles.push(this.instaId);
+    localStorage.setItem('profiles',JSON.stringify(profiles));
+    this.router.navigate(['/people-around'])
   }
   
 
