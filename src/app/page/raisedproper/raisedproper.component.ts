@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { VueService } from './../vue.service';
 
 @Component({
   selector: 'app-raisedproper',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RaisedproperComponent implements OnInit {
 
-  constructor() { }
+  user_name: string;
+  username: string;
+  user_image = "assets/images/download.jpg";
+  error: string;
+  constructor(private route: ActivatedRoute,private vueService: VueService) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+
+      this.vueService.instaApi(params.get('productId')).subscribe(res => {
+          this.user_name = res.graphql.user.full_name;
+          this.username = '@'+res.graphql.user.username;
+          this.user_image = res.graphql.user.profile_pic_url;
+      });
+    });
   }
 
 }

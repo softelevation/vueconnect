@@ -1,69 +1,90 @@
 <div class="main-contant-bg mobile-screen" style="min-height: 100vh;">
-    <header class="myHeader">
-      <div class="">
-        <div class="container">
-            <div class="logoSignup d-flex justify-content-between align-items-center">
-              <div class="logo-small">
-                <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="100px">
-              </div>
-              <P>people around me</P>
-            </div>
-          </div>
-      </div>
-    </header>
-    <section class="multi-img-col">
+  <header class="myHeader">
+    <div class="">
       <div class="container">
-       <div class="row">
-         <div class="col-6">
-           <div class="inner-col-img mb-4">
-            <p>LISABYU</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{lisabeyu_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img mb-4">
-            <p>RAISEDPROPER</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{cyruskind_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img mb-4">
-            <p>LISABYU</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{lindseymallon_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img mb-4">
-            <p>RAISEDPROPER</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{ardilladeneys_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img mb-4">
-            <p>LISABYU</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{zeejacattack_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img mb-4">
-            <p>RAISEDPROPER</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{officialkatka_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img ">
-            <p>LISABYU</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{nu__dao_image}}" alt="profile-img"></a>
-           </div>
-         </div>
-         <div class="col-6">
-           <div class="inner-col-img">
-            <p>RAISEDPROPER</p>
-            <a routerLink="/add-however" routerLinkActive="active"><img class="img-fluid" src="{{ianastasiagreen_image}}" alt="profile-img"></a>
-           </div>
+          <div class="logoSignup d-flex justify-content-between align-items-center">
+            <div class="logo-small">
+              <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="100px">
+            </div>
+            <b class="peopule_arrount_me">people around me</b>
+          </div>
+        </div>
+    </div>
+  </header>
+  <section class="multi-img-col">
+    <div class="container">
+     <div class="row">
+       <div class="col-6">
+         <div class="inner-col-img mb-4">
+          <p>{{lisabeyu_name}} </p>
+          <a routerLink="/raisedproper/lisabeyu" routerLinkActive="active">
+            <img class="img-fluid" src="{{lisabeyu_image}}" alt="profile-img">
+          </a>
          </div>
        </div>
-      </div>
-    </section>
-    <div class="bottom-empty-section" style="height: 60px"></div>
-  </div>
+       <div class="col-6">
+         <div class="inner-col-img mb-4">
+          <p>{{cyruskind_name}}</p>
+          <a routerLink="/raisedproper/cyruskind" routerLinkActive="active">
+           <img class="img-fluid" src="{{cyruskind_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="inner-col-img mb-4">
+          <p>{{lindseymallon_name}}</p>
+          <a routerLink="/raisedproper/_lindseymallon" routerLinkActive="active">
+           <img class="img-fluid" src="{{lindseymallon_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="inner-col-img mb-4">
+          <p>{{ardilladeneys_name}}</p>
+          <a routerLink="/raisedproper/ardilladeneys" routerLinkActive="active">
+           <img class="img-fluid" src="{{ardilladeneys_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="inner-col-img mb-4">
+          <p>{{zeejacattack_name}}</p>
+          <a routerLink="/raisedproper/zeejacattack" routerLinkActive="active">
+           <img class="img-fluid" src="{{zeejacattack_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="inner-col-img mb-4">
+          <p>{{officialkatka_name}}</p>
+          <a routerLink="/raisedproper/officialkatka" routerLinkActive="active">
+           <img class="img-fluid" src="{{officialkatka_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="inner-col-img ">
+          <p>{{nu__dao_name}}</p>
+          <a routerLink="/raisedproper/nu__dao" routerLinkActive="active">
+           <img class="img-fluid" src="{{nu__dao_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+       <div class="col-6">
+         <div class="inner-col-img">
+          <p>{{ianastasiagreen_name}}</p>
+          <a routerLink="/raisedproper/thekieulinh" routerLinkActive="active">
+           <img class="img-fluid" src="{{ianastasiagreen_image}}" alt="profile-img">
+          </a>
+         </div>
+       </div>
+     </div>
+    </div>
+  </section>
+
+
+
+
+
+  <div class="bottom-empty-section" style="height: 60px"></div>
+</div>

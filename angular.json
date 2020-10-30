@@ -29,6 +29,7 @@
               "src/styles.css"
             ],
             "scripts": [
+              "src/assets/js/jquery.min.js",
               "src/assets/js/custom.js",
               "src/assets/js/slim.min.js",
               "src/assets/js/popper.min.js",

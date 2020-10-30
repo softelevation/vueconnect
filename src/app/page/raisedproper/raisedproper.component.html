@@ -6,7 +6,7 @@
               <div class="logo-small">
                 <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="100px">
               </div>
-              <P>RAISEDPROPER</P>
+              <a routerLink="/people-around" routerLinkActive="active" class="raised_back_link"><P class="raised_back_button">Back</P></a>
             </div>
           </div>
       </div>
@@ -16,8 +16,8 @@
        <div class="row">
          <div class="col-6 m-auto">
            <div class="inner-col-img mb-4 text-center">
-            <p>RAISEDPROPER</p>
-             <img class="img-fluid" src="assets/images/img2.jpeg" alt="profile-img">
+            <p class="raised_username">{{user_name}}</p>
+             <img class="img-fluid" src="{{user_image}}" alt="profile-img">
            </div>
          </div>
        </div>
@@ -28,7 +28,7 @@
       <div class="container text-center">
         <form>
           <div class="form-field">
-            <input type="text" name="Url" placeholder="Url">
+            <input type="text" name="Url" value="{{username}}" placeholder="Url">
           </div>
           <div class="form-field">
             <input type="text" name="Url" placeholder="Url">

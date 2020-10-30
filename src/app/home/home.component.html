@@ -1,28 +1,90 @@
 <div class="main-contant-bg mobile-screen" style="min-height: 100vh;">
-    <header class="myHeader">
-       <div class="inner-bg-sec">
-          <div class="container">
-             <div class="logoSignup d-flex justify-content-between align-items-center">
-                <div class="logo-small">
-                   <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="50px">
-                </div>
-                <div class="signupBtn">
-                   <button class="sign_up_btn">Sign Up Free</button>
-                </div>
-             </div>
-          </div>
-       </div>
-    </header>
-    <section class="inner-sec mt-4">
-       <div class="container text-center">
-          <h2 class="mb-0">Never Miss A <br> Connection</h2>
-          <p>Connect with the people from irl to url</p>
-          <a routerLink="/connect-page" routerLinkActive="active"><button class="sign_up_btn mt-2">People around me</button></a>
-          <p><small>Already on VUE? <a routerLink="/your-list" routerLinkActive="active">Log in</a></small></p>
-          <div class="mobile-screen text-center mt-4 pt-3">
-             <img class="img-fluid" src="assets/images/mobile.png" alt="mobile-screen" width="260px">
-          </div>
-       </div>
-    </section>
-    <div class="bottom-empty-section" style="height: 60px"></div>
- </div>
+   <header class="myHeader" >
+      <div class="inner-bg-sec">
+         <div class="container">
+            <div class="logoSignup d-flex justify-content-between align-items-center" id="logoSignup">
+               <div class="logo-small">
+                  <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="50px">
+               </div>
+               <div class="signupBtn">
+                  <a routerLink="/your-list" routerLinkActive="active"><button class="sign_up_btn">Sign Up Free</button></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <section class="inner-sec mt-4">
+      <div class="container text-center">
+         <h2 class="mb-0">Never Miss A <br> Connection</h2>
+         <p>Connect with the people from irl to url</p>
+         <a routerLink="/people-around" routerLinkActive="active"><button class="sign_up_btn mt-2">Get Connect For Free</button></a>
+         <p><small>Already on VUE? <a href="#">Log in</a></small></p>
+         <div class="mobile-screen text-center mt-4 pt-3">
+            <img class="img-fluid" src="assets/images/mobile.png" alt="mobile-screen" width="260px">
+         </div>
+      </div>
+   </section>
+   <section class="mt-5">
+      <div class="container">
+         <h1 class="logo-heading">Vue</h1>
+      </div>
+   </section>
+   <section class="social-icons-sec text-right ">
+      <div class="container">
+         <img class="img-fluid" src="assets/images/hand_phone.png" alt="hand_phone" width="250px">
+      </div>
+   </section>
+   <section class="content-section">
+      <div class="container">
+         <div class="main-cont-col mb-3">
+            <h3>connect with ease</h3>
+            <p><img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="25px">will take care of all the connections by providing a list of the people around you that want to <br><b>network</b> and <b>build community.</b></p>
+         </div>
+         <div class="main-cont-col mb-3">
+            <h3>effortless organic growth </h3>
+            <p>How many times have you been at an event and weren’t able to connect? <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="25px"> helps you increase traffic and get organic followers.</p>
+         </div>
+         <div class="main-cont-col mb-3">
+            <h3>a new way to social distance</h3>
+            <p>We live in a new world. No more hugs or handshakes. <br> <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="25px"> provides an easy way of getting to know more people...even if we’re 6 ft apart.
+            </p>
+         </div>
+         <div class="main-cont-col mb-3">
+            <h3>the new way to connect</h3>
+            <p>We’ve all lost opportunities from the lack of time to connect with everyone. <img class="img-fluid" src="assets/images/VUE_BLACK.png" alt="logo-small" width="25px"> makes this a thing of the
+               past and handles the hard work while you have fun!
+            </p>
+         </div>
+         <div class="text-center inner-sec mt-4">
+            <a routerLink="/people-around" routerLinkActive="active"><button class="sign_up_btn mt-2">People around me</button></a>
+            <p><small>Already on VUE? <a href="#">Log in</a></small></p>
+         </div>
+      </div>
+   </section>
+   <section class="mt-5">
+      <div class="container">
+         <h1 class="logo-heading">Vue</h1>
+      </div>
+   </section>
+   <section class="form_fields">
+  <div class="container text-center">
+    <p>(add however many you want)</p>
+    <form>
+      <div class="form-field">
+        <input type="text" name="Name" placeholder="Name">
+      </div>
+      <div class="form-field">
+        <input type="text" name="Url" placeholder="Instagram">
+      </div>
+      <div class="form-field">
+        <input type="text" name="Url" placeholder="Twiiter">
+      </div>
+      <div class="form-field">
+        <input type="text" name="Email" placeholder="Email address">
+      </div>
+      <button class="sign_up_btn mt-2 btn-big">Get Connected</button>
+    </form>
+  </div>
+</section>
+   <div class="bottom-empty-section" style="height: 60px"></div>
+</div>
