@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: "http://localhost:3000/api/",
+  API: "http://vueconnect.co:3000/api/",
   Insta_Api: "https://www.instagram.com/"
 };
 
