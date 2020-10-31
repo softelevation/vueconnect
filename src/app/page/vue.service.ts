@@ -16,8 +16,13 @@ export class VueService {
 
   constructor(private http: HttpClient) { }
 
-  getDashboard() {
-    return this.http.get<any>(this.serverUrl + 'dashboard').pipe(
+  saveProfile(data) {
+    return this.http.post<any>(this.serverUrl + 'insta',data).pipe(
+      catchError(this.handleError)
+    );
+  }
+  getProfiles() {
+    return this.http.get<any>(this.serverUrl + 'insta').pipe(
       catchError(this.handleError)
     );
   }

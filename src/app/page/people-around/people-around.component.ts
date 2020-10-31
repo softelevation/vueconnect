@@ -43,10 +43,12 @@ export class PeopleAroundComponent implements OnInit {
   }
 
   async init(){
-    const profiles=localStorage.getItem('profiles') && JSON.parse(localStorage.getItem('profiles')) || [];
-    const defaultAarray=[...profiles,'lisabeyu','cyruskind','_lindseymallon','ardilladeneys','zeejacattack','nu__dao'];
+    // const profiles=localStorage.getItem('profiles') && JSON.parse(localStorage.getItem('profiles')) || [];
+    // const defaultAarray=[...profiles,'lisabeyu','cyruskind','_lindseymallon','ardilladeneys','zeejacattack','nu__dao'];
+    // const uniArr = [...(new Set(defaultAarray))];
 
-    const uniArr = [...(new Set(defaultAarray))];
+    const profliesRes:any = await  this.vueService.getProfiles().toPromise();
+    const uniArr = [...(new Set(profliesRes.map(p=>p.instaId.replace('@',''))))];
     for(const p of uniArr){
       try{
         const res:any = await  this.vueService.instaApi(p).toPromise();

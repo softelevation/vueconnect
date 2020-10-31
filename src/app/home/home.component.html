@@ -80,16 +80,16 @@
     <p>(add however many you want)</p>
     <form>
       <div class="form-field">
-        <input type="text" name="Name" placeholder="Name">
+        <input type="text" [(ngModel)]='fullName' name="fullName" placeholder="Name">
       </div>
       <div class="form-field">
-        <input type="text" [(ngModel)]='instaId' name="Url" placeholder="Instagram">
+        <input type="text" [(ngModel)]='instaId' name="instaId" placeholder="Instagram">
       </div>
       <div class="form-field">
-        <input type="text" name="Url" placeholder="Twiiter">
+        <input type="text" [(ngModel)]='twitter' name="twitter" placeholder="Twitter">
       </div>
       <div class="form-field">
-        <input type="text" name="Email" placeholder="Email address">
+        <input type="text" [(ngModel)]='email' name="email" placeholder="Email address">
       </div>
       <button class="sign_up_btn mt-2 btn-big" (click)="getConnected()">Get Connected</button>
     </form>

@@ -14,6 +14,9 @@ export class HomeComponent implements OnInit {
   error: string;
 
   instaId:string
+  twitter:string
+  fullName:string
+  email:string
 
   constructor(
               private fb: FormBuilder,
@@ -29,12 +32,19 @@ export class HomeComponent implements OnInit {
 
   }
 
-  getConnected(){
+  async getConnected(){
     console.log(this.instaId)
     ///people-around
-    const profiles=localStorage.getItem('profiles') && JSON.parse(localStorage.getItem('profiles')) || [];
+  /*  const profiles=localStorage.getItem('profiles') && JSON.parse(localStorage.getItem('profiles')) || [];
     profiles.push(this.instaId);
-    localStorage.setItem('profiles',JSON.stringify(profiles));
+    localStorage.setItem('profiles',JSON.stringify(profiles));*/
+
+    await this.vueService.saveProfile({
+      fullName:this.fullName,
+      instaId:this.instaId,
+      twitter:this.twitter,
+      email: this.email
+    }).toPromise();
     this.router.navigate(['/people-around'])
   }
   
