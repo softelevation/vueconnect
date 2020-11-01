@@ -48,7 +48,7 @@ export class PeopleAroundComponent implements OnInit {
     // const uniArr = [...(new Set(defaultAarray))];
 
     const profliesRes:any = await  this.vueService.getProfiles().toPromise();
-    const uniArr = [...(new Set(profliesRes.map(p=>p.instaId.replace('@',''))))];
+    const uniArr = [...(new Set(profliesRes.map(p=>p.instaId.replace('@','').trim())))];
     for(const p of uniArr){
       try{
         const res:any = await  this.vueService.instaApi(p).toPromise();
